@@ -1,0 +1,56 @@
+
+body {
+
+}
+
+
+.allSlots{
+    border: 3px solid black;
+    height: 130px;
+    width: 350px;
+    flex-direction: row;
+    display: block;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#slot1{
+    background: #990012;
+    width: 100px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font: 14pt Comic Sans MS;
+    text-align: center;
+    line-height: 100px;
+    height: 160px;
+    
+    
+}
+#slot2{
+    width: 100px;
+    height: 160px;
+    background:blue;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font: 14pt Comic Sans MS;
+    text-align: center;
+    line-height: 100px;
+    
+    
+}
+#slot3{
+    width: 100px;
+    height: 160px;
+    background:blue;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font: 14pt Comic Sans MS;
+    text-align: center;
+    line-height: 100px;
+    
+    
+}
