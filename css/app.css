@@ -5,16 +5,17 @@ body {
 
 
 .allSlots{
-    border: 3px solid black;
     height: 130px;
     width: 350px;
-    flex-direction: row;
-    display: block;
-    min-height: 100vh;
+    flex-direction: row; 
+     display: block; 
+    height: 500px;
+    
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid black;
     
 }
 
@@ -27,6 +28,10 @@ body {
     text-align: center;
     line-height: 100px;
     height: 160px;
+    position: fixed;
+    margin-right: 210px;
+    -webkit-transition:width 1.5s, height 1.5s, background-color 1.5s, -webkit-transform 1.5s;
+transition:width 1.5s, height 1.5s, background-color 1.5s, transform 1.5s;
     
     
 }
@@ -39,18 +44,35 @@ body {
     font: 14pt Comic Sans MS;
     text-align: center;
     line-height: 100px;
+    position: fixed;
+    /* -webkit-transform:rotate(360deg);
+transform:rotate(360deg); */
     
     
 }
 #slot3{
     width: 100px;
     height: 160px;
-    background:blue;
+    background: green;
     color: #FFFFFF;
     border-radius: 10px;
     font: 14pt Comic Sans MS;
     text-align: center;
     line-height: 100px;
+    position: fixed;
+    margin-left: 240px;
+    
+    
+}
+#gamestauts{
+    margin-top: -60px;
+    margin-bottom: 230px;
+    font-size: 100px;
+    position: fixed;
+}
+#reset{
+    margin-top: 100px;
+    margin-left: 100px;
     
     
 }
