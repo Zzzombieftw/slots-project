@@ -100,6 +100,7 @@ transform:rotate(360deg); */
 }
 body {
     margin: 10px;
+    background-color: blue;
 }
 .slot-number {
     font-size: 100px;
@@ -108,7 +109,7 @@ body {
     text-align: center;
     display: none;
     font-size: xx-large;
-    color: blue;
+    color: white;
 }
 .center {
     text-align: center;

@@ -122,6 +122,9 @@
 //10.a make each combo = a multiplier to increaes money
 //10.b if player gets a losing combo or anything else besides a winning combo take away the amount they bet from total
 //11.make reset button that will rest the money and clear the slots machine and the amount they had  back to 100
+
+getRandomNumber()
+
 function getRandomNumber() {
     return Math.floor(Math.random() * 2) + 1;
 }
@@ -157,4 +160,4 @@ document.getElementById(".btnp").addEventListener( ("click",spin())
 function hi(){
     console,log("ji")
 }
-console.log(hi())
+console.log("it wroks")
