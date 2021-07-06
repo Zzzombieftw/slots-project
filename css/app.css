@@ -1,5 +1,5 @@
 
-body {
+/* body {
 
 }
 
@@ -29,12 +29,12 @@ body {
     line-height: 100px;
     height: 160px;
     position: fixed;
-    margin-right: 210px;
+    margin-right: 210px; */
     /* -webkit-transition:width 1.5s, height 1.5s, background-color 1.5s, -webkit-transform 1.5s;
 transition:width 1.5s, height 1.5s, background-color 1.5s, transform 1.5s;
      */
     
-}
+/* }
 #slot2{
     width: 100px;
     height: 160px;
@@ -44,7 +44,7 @@ transition:width 1.5s, height 1.5s, background-color 1.5s, transform 1.5s;
     font: 14pt Comic Sans MS;
     text-align: center;
     line-height: 100px;
-    position: fixed;
+    position: fixed; */
     /* -webkit-transform:rotate(360deg);
 transform:rotate(360deg); */
 /* animation-name: spin;
@@ -56,7 +56,7 @@ transform:rotate(360deg); */
    /* transform: rotate(0.3rad);/ */
    /* transform: rotate(3grad); */ 
    /* transform: rotate(.03turn);  */
-}
+/* }
 
     
     
@@ -90,4 +90,33 @@ transform:rotate(360deg); */
 }
 #sc {
     border: 10px solid black;
+}
+
+.slotNum{
+    font-size: 100px;
+} */
+* {
+    font-family: monospace;
+}
+body {
+    margin: 10px;
+}
+.slot-number {
+    font-size: 100px;
+}
+.message {
+    text-align: center;
+    display: none;
+    font-size: xx-large;
+    color: red;
+}
+.center {
+    text-align: center;
+}
+.lever {
+    margin-top: 5px;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
 }
