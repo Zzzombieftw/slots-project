@@ -5,45 +5,18 @@
     <meta name="description" content="Slot machine game">
     <meta name="keywords" content="HTML, CSS, JavaScript, Slot Machine, Game">
     <meta name="viewport" content="">
-    <meta name="organization" content="One-Off Coder">
+    
     <title>Slot Machine!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- <style>
-        * {
-            font-family: monospace;
-        }
-        body {
-            margin: 10px;
-        }
-        .slot-number {
-            font-size: 100px;
-        }
-        .message {
-            text-align: center;
-            display: none;
-            font-size: xx-large;
-            color: red;
-        }
-        .center {
-            text-align: center;
-        }
-        .lever {
-            margin-top: 5px;
-        }
-        table.center {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style> -->
-    <link defer src="js/apps.js"></link>
+   <link defer src="js/apps.js"></link>
     <link rel="stylesheet" href="css/app.css"></link>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Play Slot!</h1>
+            <h1 class="display-2">Play Slot!</h1>
             <p class="lead">
                 Slot machine simulator
             </p>
@@ -64,6 +37,7 @@
             <tr>
                 <td>
                     <span id="item1" class="slot-number">-</span>
+                    
                 </td>
                 <td>
                     <span id="item2" class="slot-number">-</span>
@@ -77,9 +51,9 @@
     <div id="message" class="center message">
         You Won!
     </div>
-    <audio id="boing">
+    <!-- <audio id="boing">
         <source src="boing.mp3" type="audio/mpeg">
-    </audio>
+    </audio> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -108,19 +82,19 @@
     item2.innerHTML = `${num2}`; 
     item3.innerHTML = `${num3}`;
     if (num1 === num2 && num1 === num3) {
-        playBoing();
+        
         showMessage();
     } else {
         hideMessage();
     }
-    console.log("hi")
+    
 }
         
         
-        function playBoing() {
-            const boing = document.getElementById("boing");
-            boing.play();
-        }
+        // function playBoing() {
+        //     const boing = document.getElementById("boing");
+        //     boing.play();
+        // }
         function showMessage() {
             const msg = document.getElementById("message");
             msg.style.display = "block";

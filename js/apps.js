@@ -1,110 +1,3 @@
-// --------const------------
-
-// let turn 
-// let amountLeft = 100
-// let board = []
-
-
-
-
-
-
-// // --------variables-------------
-// // const reel1 = document.getElementById("#slot1")
-// // const reel2 = document.getElementById("#slot2")
-// // const reel3 = document.getElementById("#slot3")
-// const gameBoard = document.getElementById(".allSlots")
-// const gameStatus = document.getElementById("gameStauts")
-// const startBtn = document.getElementById("start")
-// const resetBtn = document.getElementById("reset")
-
-
-
-// // ---------------eventlistners----------
-// // gameBoard.addEventListener("click",spinReels())
-// // add eventlistener to start button
-// // connect the elemants on the screen to a random number and make it appear in the box
-// // make win condoition by adding up the numbers and if they are qually display message
-// startBtn.addEventListener("click",()=>{
-//     // const item1 = getElement('#slot1');
-//     // const item2 = getElement('#slot2');
-//     // const item3 = getElement('#slot3');
-
-//     const num1 = randomNum();
-//     const num2 = randomNum();
-//     const num3 = randomNum();
-
-    
-//     // reel1.innerText = `${num1}`;
-//     // reel2.innerHTML = `${num2}`;
-//     // reel3.innerHTML = `${num3}`;
-
-// // let newNum1 = reel1 + num1
-// // let newNum2 = reel2 + num2
-// // let newNum3 = reel3 + num3
-// if(newNum1 + newNum2 + newNum3 === 3){
-//     amountLeft = `${amountLeft}` + 3
-//     gameStatus.innerHTML = `you won ${amountLeft}` 
-    
-// }else if(newNum1 + newNum2 + newNum3 === 6){
-//     amountLeft = `${amountLeft}` + 6
-//     gameStatus.innerHTML = `you won ${amountLeft}`
-
-// }else if(newNum1 + newNum2 + newNum3 === 9){
-//     amountLeft = `${amountLeft}` + 9
-//     gameStatus.innerHTML = `you won ${amountLeft}` + 9
-// }else {
-//     gameStatus.innerHTML = "you lost 1000 dollars "
-// }
-// render()
-// console.log(newNum1, newNum2, newNum3)
-// })
-// resetBtn.addEventListener("click",()=>{
-    
- 
-// amountLeft = 100
-
-
-
-// render()    
-
-// } )
-
-
-// // -----------functions----------
-// function start(){
-//     let reel1 = 0 
-//     let reel2 = 0 
-//     let reel3 = 0 
-//     render() 
-// }
-// start()
-// function getElement(id) {
-//     return document.getElementById(id);
-// }
-
-
-
-
-
-
-// function render() {
-//     for (let i = 0; i < board.length; i++) {
-        
-//     }
-// }
-
-
-// function winner () {
-    
-    
-// }
-
-
-// function randomNum(params) {
-//     return Math.floor(Math.random()* 4) + 1
-// }
-
 // /SLOTS MACHINE 
 //player will start with 100 dollars 
 // 1. define const for the money, for each element in the slots, etc.
@@ -122,42 +15,82 @@
 //10.a make each combo = a multiplier to increaes money
 //10.b if player gets a losing combo or anything else besides a winning combo take away the amount they bet from total
 //11.make reset button that will rest the money and clear the slots machine and the amount they had  back to 100
+// --------const------------
 
-getRandomNumber()
+let turn 
+let amountLeft = 100
+let slotsArr = [[0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 0x1F355,
+    0x1F354, 0x1F35F, 0x1F6C0, 0x1F48E, 0x1F5FA, 0x23F0, 0x1F579, 0x1F4DA,
+    0x1F431, 0x1F42A, 0x1F439, 0x1F424]]
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * 2) + 1;
-}
-function getElement(id) {
-    return document.getElementById(id);
-}
-const num1 = getRandomNumber();
-function spin() {
-    const item1 = getElement('item1');
-    const item2 = getElement('item2');
-    const item3 = getElement('item3');
-    const num2 = getRandomNumber();
-    const num3 = getRandomNumber();
-    item1.innerHTML = `${num1}`;
-    item2.innerHTML = `${num2}`;
-    item3.innerHTML = `${num3}`;
-    if (num1 === num2 && num1 === num3) {
-        console.log(num1, num2, num3)
-        showMessage();
-    } else {
-        hideMessage();
-    }
-}
-function hideMessage() {
-    const msg = document.getElementById("message");
-    msg.style.display = "none";
-}
 
-document.getElementById(".btnp").addEventListener( ("click",spin())
 
-)
 
-function hi(){
-    console,log("ji")
-}
-console.log("it wroks")
+
+
+// --------variables-------------
+
+// const gameBoard = document.getElementById(".allSlots")
+// const gameStatus = document.getElementById("gameStauts")
+// const startBtn = document.getElementById("start")
+// const resetBtn = document.getElementById("reset")
+
+
+
+// ---------------eventlistners----------
+
+// add eventlistener to start button
+// connect the elemants on the screen to a random number and make it appear in the box
+// make win condoition by adding up the numbers and if they are qually display message
+
+            
+            // -----------functions----------
+            getRandomNumber()
+            
+            function getRandomNumber() {
+                return Math.floor(Math.random() * 2) + 1;
+            }
+            function getElement(id) {
+                return document.getElementById(id);
+            }
+            const num1 = getRandomNumber();
+            function spin() {
+                const item1 = getElement('item1');
+                const item2 = getElement('item2');
+                const item3 = getElement('item3');
+                const num2 = getRandomNumber();
+                const num3 = getRandomNumber();
+                item1.innerHTML = `${num1}`;
+                item2.innerHTML = `${num2}`;
+                item3.innerHTML = `${num3}`;
+                if (num1 === num2 && num1 === num3) {
+                    console.log(num1, num2, num3)
+                    showMessage();
+                } else {
+                    hideMessage();
+                }
+            }
+            function hideMessage() {
+                const msg = document.getElementById("message");
+                msg.style.display = "none";
+            }
+            
+            document.getElementById(".btnp").addEventListener( ("click",spin())
+            
+            )
+            
+            function hi(){
+                console,log("ji")
+            }
+            console.log("it wroks")
+
+
+
+
+
+
+
+
+
+
+
