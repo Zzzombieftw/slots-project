@@ -26,7 +26,7 @@ const arry= []
 const emoji0 = '🍎';
 const emoji1 = '📓';
 const emoji2  = '💀';
-    
+const score = document.getElementById("score")    
 
 
 
@@ -67,16 +67,30 @@ function spin() {
     slot2.innerHTML = eval("emoji" + num2)
     slot3.innerHTML = eval("emoji" + num3)
     slot4.innerHTML = eval("emoji" + num4)
-    slot1.classList.add('animated', 'pulse')
     if (num1 === num2 && num1 === num3 && num1 == num4) {
+        score.value = parseInt(score.value) + 100
+
+        showMessage()
+    }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        score.value = parseInt(score.value) + 50
+        showMessage()
+    }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        score.value = parseInt(score.value) + 50
+        showMessage()
+    }else if(num1 === num3 && num2 === num4){
+        score.value = parseInt(score.value) + 25
+        showMessage()
         
-        showMessage()
-    } else if(num1 != num2 && num2 === num3 && num3 == num4){
-        showMessage()
-    }else {
+    }else if(score.value >= 100){
+        score.value = parseInt(score.value) -20
         hideMessage()
-    }
-}
+    }else{
+        hideMessage() 
+        
+        
+        score.style.backgroundColor = color
+    slot1.classList.add('animated', 'pulse')
+}}
 
 function showMessage() {
     msg.style.display = "block"
@@ -86,9 +100,22 @@ function showMessage() {
 function hideMessage() {
     msg.style.display = "none";
 }
+function randomC() {
+    let characters = "0123456789ABCDEF";
+    let color = '#';
+    
+    for (let i = 0; i < 6; i++) {
+        color += characters[getRandomNumber(0, 15)];
+    }
+    
+    return color;
+}
 
-
-
+function getRandomNumber(low, high) {
+    let r = Math.floor(Math.random() * (high - low + 1)) + low;
+    return r;
+}
+let color = randomC()
 
 
 
