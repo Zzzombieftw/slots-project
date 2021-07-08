@@ -35,3 +35,8 @@ table.center {
 .container{
     background: url(https://wallpaperaccess.com/light-death-note);
 }
+#score{
+    background-color: blue;
+    border: 5px solid;
+    display: inline;
+}
