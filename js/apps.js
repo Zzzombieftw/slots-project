@@ -19,13 +19,13 @@
 
 let turn 
 let amountLeft = 100
-let slotsArr = [[0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 0x1F355,
-    0x1F354, 0x1F35F, 0x1F6C0, 0x1F48E, 0x1F5FA, 0x23F0, 0x1F579, 0x1F4DA,
-    0x1F431, 0x1F42A, 0x1F439, 0x1F424]]
+
 const slots = document.querySelectorAll("slot-number")
 
-
-
+let eArr = [0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 0x1F355,
+    0x1F354, 0x1F35F, 0x1F6C0, 0x1F48E, 0x1F5FA, 0x23F0, 0x1F579, 0x1F4DA,
+    0x1F431, 0x1F42A, 0x1F439, 0x1F424]
+let newArr = []
 
 
 // --------variables-------------
@@ -45,35 +45,41 @@ const slots = document.querySelectorAll("slot-number")
 
             
             // -----------functions----------
-getRandomNumber()
-            
-function getRandomNumber() {
+
+ //make a random number function  
+function randomNum() {
     return Math.floor(Math.random() * 3) + 1;
 }
-function getElement(id) {
-    return document.getElementById(id);
+// a function to alwasy get the id of the slot elemants
+function getEl(id) {
+    return document.getElementById(id)
 }
-const num1 = getRandomNumber();
 function spin() {
-    const item1 = getElement('item1');
-    const item2 = getElement('item2');
-    const item3 = getElement('item3');
-    const num2 = getRandomNumber();
-     const num3 = getRandomNumber();
-    item1.innerHTML = `${num1}`;
-    item2.innerHTML = `${num2}`;
-    item3.innerHTML = `${num3}`;
-if (num1 === num2 && num1 === num3) {
+    const slot1 = getEl('slot1')
+    const slot2 = getEl('slot2')
+    const slot3 = getEl('slot3')
+    const slot4 = getEl('slot4')
+    const num1 = randomNum()
+    const num2 = randomNum()
+    const num3 = randomNum()
+    const num4 = randomNum()
+    slot1.innerHTML = `${num1}`
+    slot2.innerHTML = `${num2}`
+    slot3.innerHTML = `${num3}`
+    slot4.innerHTML = `${num4}`
+    slot1.classList.add('animated', 'pulse')
+
+if (num1 === num2 && num1 === num3 && num1 == num4) {
     
     showMessage();
 } else {
     hideMessage();
 }if(num1 != num2 && num1 != num3){
-}   
-}
+}} 
+
 function showMessage() {
-    const msg = document.getElementById("message");
-    msg.style.display = "block";
+    const msg = document.getElementById("message")
+    msg.style.display = "block"
     msg.classList.add('animated', 'pulse')
 }
 
@@ -82,8 +88,11 @@ function hideMessage() {
     msg.style.display = "none";
 }
 
-
-            
+eArr.forEach((e)=>{
+parseInt(e)
+newArr.push(e)
+})
+           
 
 
 

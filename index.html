@@ -17,42 +17,47 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-2">Slot Machine!</h1>
+            <h1 class="display-3">Slot Machine!</h1>
             <p class="lead">
                 
             </p>
             <p>
                 
             </p>
-            <hr class="my-4">
+            <hr class="my-5">
             <p>
                 match 4 in a row to win big!!!!!!
             </p>
+            <table class="center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="slot1" class="slot-number" >-</div>
+                            
+                        </td>
+                        <td>
+                            <span id="slot2" class="slot-number">-</span>
+                        </td>
+                        <td>
+                            <span id="slot3" class="slot-number">-</span>
+                        </td>
+                        <td>
+                            <span id="slot4" class="slot-number">-</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="center lever">
         <button type="button" class="btnp" onclick="spin()">Lever</button>
     </div>
-    <table class="center">
-        <tbody>
-            <tr>
-                <td>
-                    <span id="item1" class="slot-number">-</span>
-                    
-                </td>
-                <td>
-                    <span id="item2" class="slot-number">-</span>
-                </td>
-                <td>
-                    <span id="item3" class="slot-number">-</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <div id="message" class="center message">
-        You Won!
+        You Won$$$!
     </div>
-    
+    <audio id="spining-sound">
+        <source src="slots.mp3/spin.mp3" type="audio/mpeg">
+    </audio>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
