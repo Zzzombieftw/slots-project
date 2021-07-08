@@ -45,44 +45,42 @@ let slotsArr = [[0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 
 
             
             // -----------functions----------
-            getRandomNumber()
+getRandomNumber()
             
-            function getRandomNumber() {
-                return Math.floor(Math.random() * 2) + 1;
-            }
-            function getElement(id) {
-                return document.getElementById(id);
-            }
-            const num1 = getRandomNumber();
-            function spin() {
-                const item1 = getElement('item1');
-                const item2 = getElement('item2');
-                const item3 = getElement('item3');
-                const num2 = getRandomNumber();
-                const num3 = getRandomNumber();
-                item1.innerHTML = `${num1}`;
-                item2.innerHTML = `${num2}`;
-                item3.innerHTML = `${num3}`;
-                if (num1 === num2 && num1 === num3) {
-                    console.log(num1, num2, num3)
-                    showMessage();
-                } else {
-                    hideMessage();
-                }
-            }
-            function hideMessage() {
-                const msg = document.getElementById("message");
-                msg.style.display = "none";
-            }
+function getRandomNumber() {
+    return Math.floor(Math.random() * 3) + 1;
+}
+function getElement(id) {
+    return document.getElementById(id);
+}
+const num1 = getRandomNumber();
+function spin() {
+    const item1 = getElement('item1');
+    const item2 = getElement('item2');
+    const item3 = getElement('item3');
+    const num2 = getRandomNumber();
+     const num3 = getRandomNumber();
+    item1.innerHTML = `${num1}`;
+    item2.innerHTML = `${num2}`;
+    item3.innerHTML = `${num3}`;
+if (num1 === num2 && num1 === num3) {
+    
+    showMessage();
+} else {
+    hideMessage();
+}}
+function showMessage() {
+    const msg = document.getElementById("message");
+    msg.style.display = "block";
+    msg.classList.add('animated', 'pulse')
+}
+
+function hideMessage() {
+    const msg = document.getElementById("message");
+    msg.style.display = "none";
+}
             
-            document.getElementById(".btnp").addEventListener( ("click",spin())
-            
-            )
-            
-            function hi(){
-                console,log("ji")
-            }
-            console.log("it wroks")
+
 
 
 

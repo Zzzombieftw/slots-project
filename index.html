@@ -17,16 +17,16 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-2">Play Slot!</h1>
+            <h1 class="display-2">Slot Machine!</h1>
             <p class="lead">
-                Slot machine simulator
+                
             </p>
             <p>
                 
             </p>
             <hr class="my-4">
             <p>
-                Hit lever button to start
+                match 4 in a row to win big!!!!!!
             </p>
         </div>
     </div>
@@ -52,9 +52,7 @@
     <div id="message" class="center message">
         You Won!
     </div>
-    <!-- <audio id="boing">
-        <source src="boing.mp3" type="audio/mpeg">
-    </audio> -->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -65,46 +63,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" crossorigin="anonymous"></script>
-    <script>
-        function getRandomNumber() {
-            return Math.floor(Math.random() * 3) + 1;
-        }
-        function getElement(id) {
-            return document.getElementById(id);
-        }
-        function spin() {
-    const item1 = getElement('item1');
-    const item2 = getElement('item2');
-    const item3 = getElement('item3');
-    const num1 = getRandomNumber();
-    const num2 = getRandomNumber();
-    const num3 = getRandomNumber();
-    item1.innerHTML = `${num1}`;
-    item2.innerHTML = `${num2}`; 
-    item3.innerHTML = `${num3}`;
-    if (num1 === num2 && num1 === num3) {
-        
-        showMessage();
-    } else {
-        hideMessage();
-    }
     
-}
-        
-        
-        // function playBoing() {
-        //     const boing = document.getElementById("boing");
-        //     boing.play();
-        // }
-        function showMessage() {
-            const msg = document.getElementById("message");
-            msg.style.display = "block";
-            msg.classList.add('animated', 'pulse')
-        }
-        function hideMessage() {
-            const msg = document.getElementById("message");
-            msg.style.display = "none";
-        }
-    </script>
 </body>
 </html>
