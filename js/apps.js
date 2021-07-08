@@ -23,15 +23,12 @@ let amountLeft = 100
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
 const arry= []
-var emoji0 = '🍎';
-var emoji1 = '📓';
-var emoji2  = '💀';
+const emoji0 = '🍎';
+const emoji1 = '📓';
+const emoji2  = '💀';
     
-console.log(emoji0)
-var maxRand = 3;
-  var numRand = Math.floor(Math.random() * maxRand);
-  console.log(numRand);
-  
+
+
 
 
 // --------variables-------------
@@ -51,7 +48,7 @@ var maxRand = 3;
 
  //make a random number function  
 function randomNum() {
-    return Math.floor(Math.random() * 2) ;
+    return Math.floor(Math.random() * 3) ;
 }
 // a function to alwasy get the id of the slot elemants
 function getEl(id) {
