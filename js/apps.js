@@ -22,8 +22,16 @@ let amountLeft = 100
 
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
-
-
+const arry= []
+var emoji0 = '🍎';
+var emoji1 = '📓';
+var emoji2  = '💀';
+    
+console.log(emoji0)
+var maxRand = 3;
+  var numRand = Math.floor(Math.random() * maxRand);
+  console.log(numRand);
+  
 
 
 // --------variables-------------
@@ -58,17 +66,17 @@ function spin() {
     const num2 = randomNum()
     const num3 = randomNum()
     const num4 = randomNum()
-    slot1.innerHTML = `${num1}`
-    slot2.innerHTML = `${num2}`
-    slot3.innerHTML = `${num3}`
-    slot4.innerHTML = `${num4}`
+    slot1.innerHTML = eval("emoji" + num1)
+    slot2.innerHTML = eval("emoji" + num2)
+    slot3.innerHTML = eval("emoji" + num3)
+    slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         
         showMessage();
     } else {
         hideMessage();
     }
-    slot1.classList.add('animated', 'spin')
+    slot1.classList.add('animated', 'plus')
 }
 
 function showMessage() {
@@ -79,7 +87,6 @@ function showMessage() {
 function hideMessage() {
     msg.style.display = "none";
 }
-
 
 
 
