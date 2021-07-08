@@ -10,12 +10,13 @@ body {
 .slot-number {
     font-size: 150px;
     color: red;
+    
 }
 .message {
     text-align: center;
     display: none;
     font-size: xx-large;
-    color: white;
+    color: green;
 }
 .center {
     text-align: center;
@@ -29,5 +30,5 @@ table.center {
 }
 
 .container{
-    
+    background: url(https://wallpaperaccess.com/light-death-note);
 }

@@ -68,7 +68,7 @@ function spin() {
     } else {
         hideMessage();
     }
-    slot1.classList.add('animated', 'pulse')
+    slot1.classList.add('animated', 'spin')
 }
 
 function showMessage() {
