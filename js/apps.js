@@ -48,7 +48,7 @@ const emoji2  = '💀';
 
  //make a random number function  
 function randomNum() {
-    return Math.floor(Math.random() * 3) ;
+    return Math.floor(Math.random() * 3) 
 }
 // a function to alwasy get the id of the slot elemants
 function getEl(id) {
@@ -67,13 +67,15 @@ function spin() {
     slot2.innerHTML = eval("emoji" + num2)
     slot3.innerHTML = eval("emoji" + num3)
     slot4.innerHTML = eval("emoji" + num4)
+    slot1.classList.add('animated', 'pulse')
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         
-        showMessage();
-    } else {
-        hideMessage();
+        showMessage()
+    } else if(num1 != num2 && num2 === num3 && num3 == num4){
+        showMessage()
+    }else {
+        hideMessage()
     }
-    slot1.classList.add('animated', 'plus')
 }
 
 function showMessage() {
