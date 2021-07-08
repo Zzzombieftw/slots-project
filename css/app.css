@@ -1,11 +1,13 @@
 
 
 * {
-    font-family: monospace;
+    font-family: fantasy, papyrus;
+    font-style: papyrus;
 }
 body {
     margin: 10px;
     background-color: black;
+    
 }
 .slot-number {
     font-size: 100px;
