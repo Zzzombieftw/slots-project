@@ -31,8 +31,9 @@
 * Boot strap
 
 ## Attribution
-* https://github.com/oneoffcoder
+* HTML from https://github.com/oneoffcoder
 * background from https://www.wallpaperflare.com/
+  
 
 ## Future Featucers 
 * better animation for the spinning reels
