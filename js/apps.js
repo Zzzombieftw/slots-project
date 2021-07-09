@@ -22,11 +22,12 @@ let amountLeft = 100
 
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
-const arry= []
+const score = document.getElementById("score") 
+const button10 = document.getElementById("b10")
+const button20 = document.getElementById("b20")
 const emoji0 = '🍎';
 const emoji1 = '📓';
 const emoji2  = '💀';
-const score = document.getElementById("score")    
 
 
 
@@ -42,8 +43,77 @@ const score = document.getElementById("score")
 // add eventlistener to start button
 // connect the elemants on the screen to a random number and make it appear in the box
 // make win condoition by adding up the numbers and if they are qually display message
+button10.addEventListener("click",(e)=>{
+    const slot1 = getEl('slot1')
+    const slot2 = getEl('slot2')
+    const slot3 = getEl('slot3')
+    const slot4 = getEl('slot4')
+    const num1 = randomNum()
+    const num2 = randomNum()
+    const num3 = randomNum()
+    const num4 = randomNum()
+    slot1.innerHTML = eval("emoji" + num1)
+    slot2.innerHTML = eval("emoji" + num2)
+    slot3.innerHTML = eval("emoji" + num3)
+    slot4.innerHTML = eval("emoji" + num4)
+    // all 4 coreect u double your money
+    if (num1 === num2 && num1 === num3 && num1 == num4) {
+        score.value = parseInt(score.value) + 200
+        showMessage()
+        // if three match u get half the money u put
+    }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        score.value = parseInt(score.value) + 50
+        showMessage()
+    }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        score.value = parseInt(score.value) + 50
+        showMessage()
+        // if u match two u get a quater of what u put 
+    }else if(num1 === num3 && num2 === num4){
+        score.value = parseInt(score.value) + 25
+        showMessage()
+        //if you dont get a match you lose half the money u put in 
+    }else if(score.value >= 100){
+        score.value = parseInt(score.value) - 50
+        hideMessage()
+    }else{
+        hideMessage() 
 
-            
+}})
+button20.addEventListener("click",(e)=>{
+    const slot1 = getEl('slot1')
+    const slot2 = getEl('slot2')
+    const slot3 = getEl('slot3')
+    const slot4 = getEl('slot4')
+    const num1 = randomNum()
+    const num2 = randomNum()
+    const num3 = randomNum()
+    const num4 = randomNum()
+    slot1.innerHTML = eval("emoji" + num1)
+    slot2.innerHTML = eval("emoji" + num2)
+    slot3.innerHTML = eval("emoji" + num3)
+    slot4.innerHTML = eval("emoji" + num4)
+    if (num1 === num2 && num1 === num3 && num1 == num4) {
+        score.value = parseInt(score.value) + 40
+
+        showMessage()
+    }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        score.value = parseInt(score.value) + 10
+        showMessage()
+    }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        score.value = parseInt(score.value) + 10
+        showMessage()
+    }else if(num1 === num3 && num2 === num4){
+        score.value = parseInt(score.value) + 5
+        showMessage()
+        
+    }else if(score.value >= 100 && score.value < 100){
+        score.value = parseInt(score.value) - 5
+        hideMessage()
+    }else{
+        hideMessage() 
+        
+        
+}})          
 // -----------functions----------
 
  //make a random number function  
@@ -54,7 +124,7 @@ function randomNum() {
 function getEl(id) {
     return document.getElementById(id)
 }
-function spin() {
+function bett50() {
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
     const slot3 = getEl('slot3')
@@ -72,17 +142,17 @@ function spin() {
 
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
-        score.value = parseInt(score.value) + 50
+        score.value = parseInt(score.value) + 25
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
-        score.value = parseInt(score.value) + 50
+        score.value = parseInt(score.value) + 25
         showMessage()
     }else if(num1 === num3 && num2 === num4){
-        score.value = parseInt(score.value) + 25
+        score.value = parseInt(score.value) + 12.50
         showMessage()
         
     }else if(score.value >= 100){
-        score.value = parseInt(score.value) -20
+        score.value = parseInt(score.value) - 20
         hideMessage()
     }else{
         hideMessage() 
