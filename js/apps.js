@@ -161,6 +161,8 @@ function getEl(id) {
 }
 
 function bett50() {
+    // get the id from the slots
+    
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
     const slot3 = getEl('slot3')
@@ -169,15 +171,18 @@ function bett50() {
     const num2 = randomNum()
     const num3 = randomNum()
     const num4 = randomNum()
+    // assign the slots to equal the random number plus the emoji
     slot1.innerHTML = eval("emoji" + num1)
     slot2.innerHTML = eval("emoji" + num2)
     slot3.innerHTML = eval("emoji" + num3)
     slot4.innerHTML = eval("emoji" + num4)
+    // win coditions
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 200
         stastus.innerHTML="You Won $100"
         showMessage()
+        
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
         stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 25
@@ -208,7 +213,7 @@ function bett50() {
         hideMessage() 
         
         
-    slot1.classList.add('animated', 'pulse')
+        
 }}
 
     
