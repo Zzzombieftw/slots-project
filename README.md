@@ -35,7 +35,7 @@
 * background from https://www.wallpaperflare.com/
   
 
-## Future Featucers 
+## Future Features 
 * Better animation for the spinning reels
 * Add audio to the buttons
 * Add more reels for more winning combination
