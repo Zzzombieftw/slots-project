@@ -2,6 +2,10 @@
 
 * {
     font-family: fantasy, papyrus;
+    color: red;
+    text-align: center;
+}
+.money{
     
 }
 body {
@@ -12,6 +16,7 @@ body {
 .slot-number {
     font-size: 100px;
     color: red;
+    
     
 }
 .message {
@@ -32,8 +37,8 @@ table.center {
     margin-right: auto;
 }
 
-.container{
-    
+.jumbotron{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/283/590/412/anime-death-note-ryuk-death-note-hd-wallpaper-preview.jpg');
 }
 #score{
     border: 5px solid;
