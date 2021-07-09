@@ -27,10 +27,10 @@ const button50 = document.getElementById("b50")
 const stastus = document.getElementById("re")
 const resetBtn = document.getElementById("reset")
 
-const emoji0 = '🍎';
-const emoji1 = '📓';
-const emoji2  = '💀';
-const emoji3  = '🖊️';
+const emoji0 = '🍎'
+const emoji1 = '📓'
+const emoji2  = '💀'
+const emoji3  = '🖊️'
 
 
 // --------variables-------------
@@ -162,7 +162,6 @@ function getEl(id) {
 
 function bett50() {
     // get the id from the slots
-    
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
     const slot3 = getEl('slot3')
