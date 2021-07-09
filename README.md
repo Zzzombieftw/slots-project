@@ -3,7 +3,7 @@
 * this is a DEATH note theme slot machine, for those who do not know Death Note is a very 
     popular anime that aired from 2006-2007, for being one of the first anime i ever watched i decided to game that paid tribute to that
 ## PLAY THE GAME
- (https://zzzombieftw.github.io/slots-project/)
+ * click the link (https://zzzombieftw.github.io/slots-project/)
  * [screenshot 1]![newpic](https://user-images.githubusercontent.com/84632326/125027622-80efb580-e054-11eb-8fba-576385041a58.JPG)
 
 ## PseudoCode for slot machine
