@@ -18,8 +18,8 @@ let color = randomC()
 //11.make reset button that will rest the money and clear the slots machine and the amount they had  back to 100
 // --------const------------
 
-let turn 
-let amountLeft = 100
+
+
 
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
