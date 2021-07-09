@@ -5,6 +5,7 @@
     color:#990000;
     text-align: center;
     
+    
 }
 #money{
     font-size: 30px;
@@ -13,16 +14,18 @@ body {
     margin: 10px;
     background-color: black;
     
+    
 }
 .slot-number {
     font-size: 100px;
+    color: rgb(11, 207, 54);
     
 }
 .message {
     text-align: center;
     display: none;
     font-size: 150px;
-    color: green;
+    color: rgb(11, 207, 54);
 }
 .center {
     text-align: center;
@@ -34,16 +37,19 @@ body {
 table.center {
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .jumbotron{
     background-image: url('https://c4.wallpaperflare.com/wallpaper/283/590/412/anime-death-note-ryuk-death-note-hd-wallpaper-preview.jpg');
+    
 }
 #score{
     border: 5px solid;
     display: inline;
     width: 110px;
     font-size: 30px;
+    
 }
 
 #re{
@@ -51,6 +57,6 @@ color: rgb(11, 207, 54);
 font-size: 40px;
 }
 #reset{
-    margin: 10px 140px 250px;
+    
     
 }

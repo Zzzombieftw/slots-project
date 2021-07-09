@@ -26,6 +26,7 @@ const button20 = document.getElementById("b20")
 const button50 = document.getElementById("b50")
 const stastus = document.getElementById("re")
 const resetBtn = document.getElementById("reset")
+
 const emoji0 = '🍎';
 const emoji1 = '📓';
 const emoji2  = '💀';
@@ -53,28 +54,32 @@ button100.addEventListener("click",(e)=>{
     slot4.innerHTML = eval("emoji" + num4)
     // all 4 coreect u double your money
     if (num1 === num2 && num1 === num3 && num1 == num4) {
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 200
-        stastus.innerHTML="you won $200"
+        stastus.innerHTML="You Won $200"
         showMessage()
         // if three match u get half the money u put
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 50
-        stastus.innerHTML="you won $50"
+        stastus.innerHTML="You Won $50"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 50
-        stastus.innerHTML="you won $50"
+        stastus.innerHTML="You Won $50"
         showMessage()
         // if u match two u get a quater of what u put 
     }else if(num1 === num3 && num2 === num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 25
-        stastus.innerHTML="you won $25"
+        stastus.innerHTML="You Won $25"
         showMessage()
         //if you dont get a match you lose half the money u put in 
     }else if(score.value >= 0){
         score.value = parseInt(score.value) - 50
         hideMessage()
-    }else if(score.value <= 40){
+    }else if(score.value <= 0){
         button100.disabled = true
         button50.disabled = true
         button20.disabled = true
@@ -99,20 +104,24 @@ button20.addEventListener("click",(e)=>{
     slot3.innerHTML = eval("emoji" + num3)
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 40
-        stastus.innerHTML="you won $40"
+        stastus.innerHTML="You Won $40"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 10
-        stastus.innerHTML="you won $10"
+        stastus.innerHTML="You Won $10"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 10
-        stastus.innerHTML="you won $10"
+        stastus.innerHTML="You Won $10"
         showMessage()
     }else if(num1 === num3 && num2 === num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 5
-        stastus.innerHTML="you won $5"
+        stastus.innerHTML="You Won $5"
         showMessage()
         
     }else if(score.value >= 0){
@@ -135,9 +144,10 @@ resetBtn.addEventListener("click",()=>{
     button50.disabled = false
     button20.disabled = false
     score.value = 100
-    stastus.style.color = "black"
+    stastus.style.color = "white"
     stastus.innerHTML = "PlACE A BET AND WIN BIG!!"
-})      
+})  
+   
 
 
 // -----------functions----------
@@ -164,26 +174,30 @@ function bett50() {
     slot3.innerHTML = eval("emoji" + num3)
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 100
-        stastus.innerHTML="you won $100"
+        stastus.innerHTML="You Won $100"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 25
-        stastus.innerHTML="you won $25"
+        stastus.innerHTML="You Won $25"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 25
-        stastus.innerHTML="you won $25"
+        stastus.innerHTML="You Won $25"
         showMessage()
     }else if(num1 === num3 && num2 === num4){
+        stastus.style.color ="#0bcf36"
         score.value = parseInt(score.value) + 12.50
-        stastus.innerHTML="you won $12.50"
+        stastus.innerHTML="You Won $12.50"
         showMessage()
         
     }else if(score.value >= 0){
         score.value = parseInt(score.value) - 20
         hideMessage()
-    }else if(score.value <= 0){
+    }else if(score.value <= -1){
         stastus.style.color = "#990000"
         stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
         button20.disabled = true
@@ -196,6 +210,7 @@ function bett50() {
         
     slot1.classList.add('animated', 'pulse')
 }}
+
     
 function showMessage() {
     msg.style.display = "block"
@@ -206,7 +221,8 @@ function showMessage() {
 
 
  function hideMessage() {
-    msg.style.display = "none";
+    msg.style.display = "none"
+    
 }
 
 // able all the buttons and set money back to 100
@@ -216,3 +232,4 @@ function blow(e) {
     button20.disabled = false
     score.value = 100
 }
+
