@@ -4,6 +4,7 @@
     font-family: fantasy, papyrus;
     color:#990000;
     text-align: center;
+    ;
     
     
 }
@@ -50,9 +51,9 @@ table.center {
     width: 110px;
     font-size: 30px;
     animation-name: example;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  ;
+  
 }
 @keyframes example {
     from {background-color: rgb(238, 27, 27);}
@@ -64,7 +65,14 @@ table.center {
 color: rgb(11, 207, 54);
 font-size: 40px;
 }
-#reset{
-    
-    
+h1{
+    animation-name: toplight;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+   
+}
+@keyframes toplight {
+    from{background-color: rgb(238, 27, 27);}
+    to {background-color: white;}
+  
 }
