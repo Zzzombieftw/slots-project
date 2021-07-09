@@ -1,3 +1,4 @@
+let color = randomC()
 // /SLOTS MACHINE 
 //player will start with 100 dollars 
 // 1. define const for the money, for each element in the slots, etc.
@@ -23,8 +24,9 @@ let amountLeft = 100
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
 const score = document.getElementById("score") 
-const button10 = document.getElementById("b10")
+const button100 = document.getElementById("b100")
 const button20 = document.getElementById("b20")
+const button50 = document.getElementById("b50")
 const stastus = document.getElementById("re")
 const emoji0 = '🍎';
 const emoji1 = '📓';
@@ -44,7 +46,10 @@ const emoji3  = '🖊️';
 // add eventlistener to start button
 // connect the elemants on the screen to a random number and make it appear in the box
 // make win condoition by adding up the numbers and if they are qually display message
-button10.addEventListener("click",(e)=>{
+// document.getElementById("reset").addEventListener("click",(e)=>{
+//     reset()
+// })
+button100.addEventListener("click",(e)=>{
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
     const slot3 = getEl('slot3')
@@ -77,9 +82,16 @@ button10.addEventListener("click",(e)=>{
         stastus.innerHTML="you won $25"
         showMessage()
         //if you dont get a match you lose half the money u put in 
-    }else if(score.value >= 100){
+    }else if(score.value >= 0){
         score.value = parseInt(score.value) - 50
         hideMessage()
+    }else if(score.value <= 0){
+        stastus.style.color = "red"
+        stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        button100.disabled = true
+        button50.disabled = true
+        button20.disabled = true
+
     }else{
         hideMessage() 
 
@@ -114,9 +126,15 @@ button20.addEventListener("click",(e)=>{
         stastus.innerHTML="you won $5"
         showMessage()
         
-    }else if(score.value >= 100 && score.value < 100){
-        score.value = parseInt(score.value) - 5
+    }else if(score.value >= 0){
+        score.value = parseInt(score.value) - 10
         hideMessage()
+    }else if(score.value <= 1){
+        stastus.style.color = "red"
+        stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        button100.disabled = true
+        button50.disabled = true
+        button20.disabled = true
     }else{
         stastus.innerHTML="winnner big"
         hideMessage() 
@@ -163,9 +181,14 @@ function bett50() {
         stastus.innerHTML="you won $12.50"
         showMessage()
         
-    }else if(score.value >= 100){
+    }else if(score.value >= 0){
         score.value = parseInt(score.value) - 20
         hideMessage()
+    }else if(score.value <= 0){
+        // stastus.style.color = "red"
+        // stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        // button20.disabled = true
+        
     }else{
         hideMessage() 
         
@@ -197,11 +220,13 @@ function getRandomNumber(low, high) {
     let r = Math.floor(Math.random() * (high - low + 1)) + low;
     return r;
 }
-let color = randomC()
 
-
-function reset(){
+function reset(e) {
+    button100.disabled = false
+    button50.disabled = false
+    button20.disabled = false
     score.value = 100
 }
+
 
 
