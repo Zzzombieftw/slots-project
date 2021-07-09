@@ -55,7 +55,7 @@ button100.addEventListener("click",(e)=>{
     // all 4 coreect u double your money
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         stastus.style.color ="#0bcf36"
-        score.value = parseInt(score.value) + 200
+        score.value = parseInt(score.value) + 400
         stastus.innerHTML="You Won $200"
         showMessage()
         // if three match u get half the money u put
@@ -105,7 +105,7 @@ button20.addEventListener("click",(e)=>{
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         stastus.style.color ="#0bcf36"
-        score.value = parseInt(score.value) + 40
+        score.value = parseInt(score.value) + 60
         stastus.innerHTML="You Won $40"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
@@ -175,7 +175,7 @@ function bett50() {
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         stastus.style.color ="#0bcf36"
-        score.value = parseInt(score.value) + 100
+        score.value = parseInt(score.value) + 200
         stastus.innerHTML="You Won $100"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
@@ -231,5 +231,6 @@ function blow(e) {
     button50.disabled = false
     button20.disabled = false
     score.value = 100
+    hideMessage()
 }
 
