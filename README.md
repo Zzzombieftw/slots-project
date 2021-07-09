@@ -1,14 +1,15 @@
 ## Slot Machine
+
 ## Information
 * this is a DEATH note theme slot machine, for those who do not know Death Note is a very 
     popular anime that aired from 2006-2007, for being one of the first anime i ever watched i decided to game that paid tribute to that
+
 ## PLAY THE GAME
  * click the link (https://zzzombieftw.github.io/slots-project/)
  * [screenshot 1]![newpic](https://user-images.githubusercontent.com/84632326/125027622-80efb580-e054-11eb-8fba-576385041a58.JPG)
 
 ## PseudoCode for slot machine
- 
-* define const for the money, for each element in the slots, etc.
+ * define const for the money, for each element in the slots, etc.
 * cache all the html elements so i will be able to render all the random numbers   
     for inside the slots and be able to change their color and be able to see how much money the person betts in(slots, money bet, )
 * set click events to buttons which will start the slots and place a bet 
@@ -31,6 +32,8 @@
 
 ## Attribution
 * https://github.com/oneoffcoder
+* background from https://www.wallpaperflare.com/
+
 ## Future Featucers 
 * better animation for the spinning reels
 * add audio to the buttons
