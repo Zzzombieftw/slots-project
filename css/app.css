@@ -2,11 +2,12 @@
 
 * {
     font-family: fantasy, papyrus;
-    color: red;
+    color:#990000;
     text-align: center;
-}
-.money{
     
+}
+#money{
+    font-size: 30px;
 }
 body {
     margin: 10px;
@@ -15,8 +16,6 @@ body {
 }
 .slot-number {
     font-size: 100px;
-    color: red;
-    
     
 }
 .message {
@@ -44,9 +43,14 @@ table.center {
     border: 5px solid;
     display: inline;
     width: 110px;
+    font-size: 30px;
 }
 
 #re{
 color: rgb(11, 207, 54);
 font-size: 40px;
+}
+#reset{
+    margin: 10px 140px 250px;
+    
 }

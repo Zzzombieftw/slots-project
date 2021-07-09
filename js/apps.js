@@ -74,12 +74,12 @@ button100.addEventListener("click",(e)=>{
     }else if(score.value >= 0){
         score.value = parseInt(score.value) - 50
         hideMessage()
-    }else if(score.value <= 0){
-        stastus.style.color = "red"
-        stastus.innerHTML = "YOU LOST PRESS RESTART"
+    }else if(score.value <= 40){
         button100.disabled = true
         button50.disabled = true
         button20.disabled = true
+        stastus.style.color = "#990000"
+        stastus.innerHTML = "YOU LOST PRESS RESTART"
 
     }else{
         hideMessage() 
@@ -119,7 +119,7 @@ button20.addEventListener("click",(e)=>{
         score.value = parseInt(score.value) - 10
         hideMessage()
     }else if(score.value <= 1){
-        stastus.style.color = "red"
+        stastus.style.color = "#990000"
         stastus.innerHTML = "YOU LOST PRESS RESTART"
         button100.disabled = true
         button50.disabled = true
@@ -184,7 +184,7 @@ function bett50() {
         score.value = parseInt(score.value) - 20
         hideMessage()
     }else if(score.value <= 0){
-        stastus.style.color = "red"
+        stastus.style.color = "#990000"
         stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
         button20.disabled = true
         button100.disabled = true
@@ -216,7 +216,3 @@ function blow(e) {
     button20.disabled = false
     score.value = 100
 }
-fade: function changeC(element, startcolor, endcolor, time_elapsed) {
-    fade:(score,[255,255,60], [0,0,255], 750)
-}
-changeC()
