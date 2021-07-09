@@ -28,6 +28,7 @@ const button100 = document.getElementById("b100")
 const button20 = document.getElementById("b20")
 const button50 = document.getElementById("b50")
 const stastus = document.getElementById("re")
+const resetBtn = document.getElementById("reset")
 const emoji0 = '🍎';
 const emoji1 = '📓';
 const emoji2  = '💀';
@@ -140,7 +141,15 @@ button20.addEventListener("click",(e)=>{
         hideMessage() 
         
         
-}})          
+}})    
+resetBtn.addEventListener("click",()=>{
+    button100.disabled = false
+    button50.disabled = false
+    button20.disabled = false
+    score.value = 100
+    stastus.style.color = "black"
+    stastus.innerHTML = "place a bett"
+})      
 // -----------functions----------
 
  //make a random number function  
@@ -221,7 +230,7 @@ function getRandomNumber(low, high) {
     return r;
 }
 
-function reset(e) {
+function blow(e) {
     button100.disabled = false
     button50.disabled = false
     button20.disabled = false
