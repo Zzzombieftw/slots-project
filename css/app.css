@@ -48,7 +48,7 @@ table.center {
 #score{
     border: 5px solid;
     display: inline;
-    width: 110px;
+    width: 80px;
     font-size: 30px;
     animation-name: example;
   animation-duration: 0.5s;
