@@ -25,10 +25,11 @@ const msg = document.getElementById("message")
 const score = document.getElementById("score") 
 const button10 = document.getElementById("b10")
 const button20 = document.getElementById("b20")
+const stastus = document.getElementById("re")
 const emoji0 = '🍎';
 const emoji1 = '📓';
 const emoji2  = '💀';
-
+const emoji3  = '🖊️';
 
 
 
@@ -59,17 +60,21 @@ button10.addEventListener("click",(e)=>{
     // all 4 coreect u double your money
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         score.value = parseInt(score.value) + 200
+        stastus.innerHTML="you won $200"
         showMessage()
         // if three match u get half the money u put
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
         score.value = parseInt(score.value) + 50
+        stastus.innerHTML="you won $50"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
         score.value = parseInt(score.value) + 50
+        stastus.innerHTML="you won $50"
         showMessage()
         // if u match two u get a quater of what u put 
     }else if(num1 === num3 && num2 === num4){
         score.value = parseInt(score.value) + 25
+        stastus.innerHTML="you won $25"
         showMessage()
         //if you dont get a match you lose half the money u put in 
     }else if(score.value >= 100){
@@ -94,22 +99,26 @@ button20.addEventListener("click",(e)=>{
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         score.value = parseInt(score.value) + 40
-
+        stastus.innerHTML="you won $40"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
         score.value = parseInt(score.value) + 10
+        stastus.innerHTML="you won $10"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
         score.value = parseInt(score.value) + 10
+        stastus.innerHTML="you won $10"
         showMessage()
     }else if(num1 === num3 && num2 === num4){
         score.value = parseInt(score.value) + 5
+        stastus.innerHTML="you won $5"
         showMessage()
         
     }else if(score.value >= 100 && score.value < 100){
         score.value = parseInt(score.value) - 5
         hideMessage()
     }else{
+        stastus.innerHTML="winnner big"
         hideMessage() 
         
         
@@ -118,7 +127,7 @@ button20.addEventListener("click",(e)=>{
 
  //make a random number function  
 function randomNum() {
-    return Math.floor(Math.random() * 3) 
+    return Math.floor(Math.random() * 4) 
 }
 // a function to alwasy get the id of the slot elemants
 function getEl(id) {
@@ -139,16 +148,19 @@ function bett50() {
     slot4.innerHTML = eval("emoji" + num4)
     if (num1 === num2 && num1 === num3 && num1 == num4) {
         score.value = parseInt(score.value) + 100
-
+        stastus.innerHTML="you won $100"
         showMessage()
     }else if(num1 != num2 && num2 === num3 && num3 == num4){
         score.value = parseInt(score.value) + 25
+        stastus.innerHTML="you won $25"
         showMessage()
     }else if(num1 === num2 && num2 === num3 && num3 != num4){
         score.value = parseInt(score.value) + 25
+        stastus.innerHTML="you won $25"
         showMessage()
     }else if(num1 === num3 && num2 === num4){
         score.value = parseInt(score.value) + 12.50
+        stastus.innerHTML="you won $12.50"
         showMessage()
         
     }else if(score.value >= 100){
@@ -158,15 +170,15 @@ function bett50() {
         hideMessage() 
         
         
-        score.style.backgroundColor = color
     slot1.classList.add('animated', 'pulse')
 }}
-
+    
 function showMessage() {
     msg.style.display = "block"
-    msg.classList.add('animated', 'pulse')
+     msg.classList.add('animated', 'pulse')
 }
-
+    
+ score.style.backgroundColor = color
 function hideMessage() {
     msg.style.display = "none";
 }
@@ -188,8 +200,8 @@ function getRandomNumber(low, high) {
 let color = randomC()
 
 
-
-
-
+function reset(){
+    score.value = 100
+}
 
 

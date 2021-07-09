@@ -37,7 +37,7 @@ table.center {
 }
 #score{
     transition: background-color 1s ease-in-out;
-    animation: colorTimer 1s infinite;
+    animation: colorTimer 2s infinite;
     border: 5px solid;
     display: inline;
 }
@@ -45,6 +45,7 @@ table.center {
     
     
 }
-.jumbotron{
-    
-} 
+#re{
+color: mediumspringgreen;
+font-size: 40px;
+}
