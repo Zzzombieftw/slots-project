@@ -127,7 +127,9 @@ button20.addEventListener("click",(e)=>{
     }else if(score.value >= 0){
         score.value = parseInt(score.value) - 10
         hideMessage()
-    }else if(score.value <= 1){
+        // if the score value is 0
+    }else if(score.value = 0){
+        // disable buttons and render message
         stastus.style.color = "#990000"
         stastus.innerHTML = "YOU LOST PRESS RESTART"
         button100.disabled = true
@@ -143,7 +145,7 @@ resetBtn.addEventListener("click",()=>{
     button100.disabled = false
     button50.disabled = false
     button20.disabled = false
-    score.value = 100
+    score.value = 200
     stastus.style.color = "white"
     stastus.innerHTML = "PlACE A BET AND WIN BIG!!"
 })  
