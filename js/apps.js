@@ -1,4 +1,3 @@
-let color = randomC()
 // /SLOTS MACHINE 
 //player will start with 100 dollars 
 // 1. define const for the money, for each element in the slots, etc.
@@ -16,11 +15,9 @@ let color = randomC()
 //10.a make each combo = a multiplier to increaes money
 //10.b if player gets a losing combo or anything else besides a winning combo take away the amount they bet from total
 //11.make reset button that will rest the money and clear the slots machine and the amount they had  back to 100
+
+
 // --------const------------
-
-
-
-
 const slots = document.querySelectorAll("slot-number")
 const msg = document.getElementById("message")
 const score = document.getElementById("score") 
@@ -35,21 +32,12 @@ const emoji2  = '💀';
 const emoji3  = '🖊️';
 
 
-
 // --------variables-------------
 
 
 
 
-
 // ---------------eventlistners----------
-
-// add eventlistener to start button
-// connect the elemants on the screen to a random number and make it appear in the box
-// make win condoition by adding up the numbers and if they are qually display message
-// document.getElementById("reset").addEventListener("click",(e)=>{
-//     reset()
-// })
 button100.addEventListener("click",(e)=>{
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
@@ -88,7 +76,7 @@ button100.addEventListener("click",(e)=>{
         hideMessage()
     }else if(score.value <= 0){
         stastus.style.color = "red"
-        stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        stastus.innerHTML = "YOU LOST PRESS RESTART"
         button100.disabled = true
         button50.disabled = true
         button20.disabled = true
@@ -132,7 +120,7 @@ button20.addEventListener("click",(e)=>{
         hideMessage()
     }else if(score.value <= 1){
         stastus.style.color = "red"
-        stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        stastus.innerHTML = "YOU LOST PRESS RESTART"
         button100.disabled = true
         button50.disabled = true
         button20.disabled = true
@@ -148,18 +136,20 @@ resetBtn.addEventListener("click",()=>{
     button20.disabled = false
     score.value = 100
     stastus.style.color = "black"
-    stastus.innerHTML = "place a bett"
+    stastus.innerHTML = "PlACE A BET AND WIN BIG!!"
 })      
-// -----------functions----------
 
- //make a random number function  
-function randomNum() {
+
+// -----------functions----------
+//make a random number function  
+ function randomNum() {
     return Math.floor(Math.random() * 4) 
 }
 // a function to alwasy get the id of the slot elemants
 function getEl(id) {
     return document.getElementById(id)
 }
+
 function bett50() {
     const slot1 = getEl('slot1')
     const slot2 = getEl('slot2')
@@ -194,9 +184,11 @@ function bett50() {
         score.value = parseInt(score.value) - 20
         hideMessage()
     }else if(score.value <= 0){
-        // stastus.style.color = "red"
-        // stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
-        // button20.disabled = true
+        stastus.style.color = "red"
+        stastus.innerHTML = "YOU LOSTTT PRESS RESTART"
+        button20.disabled = true
+        button100.disabled = true
+        button50.disabled = true
         
     }else{
         hideMessage() 
@@ -210,32 +202,21 @@ function showMessage() {
      msg.classList.add('animated', 'pulse')
 }
     
- score.style.backgroundColor = color
-function hideMessage() {
+ 
+
+
+ function hideMessage() {
     msg.style.display = "none";
 }
-function randomC() {
-    let characters = "0123456789ABCDEF";
-    let color = '#';
-    
-    for (let i = 0; i < 6; i++) {
-        color += characters[getRandomNumber(0, 15)];
-    }
-    
-    return color;
-}
 
-function getRandomNumber(low, high) {
-    let r = Math.floor(Math.random() * (high - low + 1)) + low;
-    return r;
-}
-
+// able all the buttons and set money back to 100
 function blow(e) {
     button100.disabled = false
     button50.disabled = false
     button20.disabled = false
     score.value = 100
 }
-
-
-
+fade: function changeC(element, startcolor, endcolor, time_elapsed) {
+    fade:(score,[255,255,60], [0,0,255], 750)
+}
+changeC()
